@@ -15,4 +15,4 @@ npm start
 echo "DONE"
 echo "-- Don't forget to run 'npm run pm2startup' and then 'npm run pm2save'"
 
-exec "$BASH"
+exec -l "$BASH"
