@@ -2,11 +2,63 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <p>Your node.js - express server is running.</p>
+    <h2>Request</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>method</td>
+          <td><%= req.method %></td>
+        </tr>
+        <tr>
+          <td>protocol</td>
+          <td><%= req.protocol %></td>
+        </tr>
+        <tr>
+          <td>host</td>
+          <td><%= req.hostname %></td>
+        </tr>
+        <tr>
+          <td>url</td>
+          <td><%= req.url %></td>
+        </tr>
+        <tr>
+          <td>IP</td>
+          <td><%= req.ip %></td>
+        </tr>
+        <tr>
+          <td>Forwarded for</td>
+          <td><%= req.ips %></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>HTTP Headers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Header</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Object.entries(req.headers).forEach(header => { %>
+          <tr>
+            <td><%= header[0] %></td>
+            <td><%= header[1] %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
   </body>
 </html>
