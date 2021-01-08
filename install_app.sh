@@ -13,6 +13,7 @@ npm install
 npm start
 
 echo "DONE"
-echo "-- Don't forget to run 'npm run pm2startup' and then 'npm run pm2save'"
-
-exec -l "$BASH"
+echo "To complete:"
+echo " - Reload your bash config with '. ~/.bashrc'"
+echo " - Run 'npm run pm2startup'"
+echo " - Run 'npm run pm2save'"
