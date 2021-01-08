@@ -11,7 +11,6 @@ echo "Installing demo-nodejs with PM2"
 
 npm install
 npm start
-npm run startup
 
 echo "DONE"
-echo "-- Don't forget to run the startup script."
+echo "-- Don't forget to run 'npm run pm2startup' and then 'npm run pm2save'"
